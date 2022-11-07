@@ -17,7 +17,7 @@ struct DOS_Header
 	unsigned short tablOff;
 	unsigned short overlay;
 	unsigned short oemid;                     // OEM identifier (for e_oeminfo)
-    unsigned short oeminfo;                   // OEM information; e_oemid specific
+        unsigned short oeminfo;                   // OEM information; e_oemid specific
 	unsigned char  res2[28];                  // Reserved words
 	unsigned long offsetToPE;
 };
@@ -25,8 +25,8 @@ typedef struct DOS_Header DOSHeader;
 
 struct File_Header
 {
-	unsigned long   signature;
-	unsigned short  Machine;
+    unsigned long   signature;
+    unsigned short  Machine;
     unsigned short  NumberOfSections;
     unsigned long   TimeDateStamp;
     unsigned long   PointerToSymbolTable;
@@ -70,7 +70,7 @@ struct PE_OptHeader
 	unsigned long long sizeOfStackReserve;
 	unsigned long long sizeOfStackCommit;
 	unsigned long long sizeOfHeapReserve;
-	unsigned long sizeOfHeapCommit;
+	unsigned long long sizeOfHeapCommit;
 	unsigned long loaderFlags;
 	unsigned long numberOfRVAAndSizes;
 	IMAGE_DATA_DIRECTORY DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES];
